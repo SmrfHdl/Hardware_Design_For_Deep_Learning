@@ -1,0 +1,120 @@
+INFO: [HLS 200-10] Running 'D:/Year3/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'ADMIN' on host 'smurfhandle' (Windows NT_amd64 version 6.2) on Thu Dec 12 17:25:00 +0700 2024
+INFO: [HLS 200-10] In directory 'D:/Year3/Hardware_design_for_Deep_Learning/Final_Project'
+INFO: [HLS 200-10] Opening project 'D:/Year3/Hardware_design_for_Deep_Learning/Final_Project/final'.
+INFO: [HLS 200-10] Adding design file 'final/core_base.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'final/TestUtils.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'final/test_core.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'D:/Year3/Hardware_design_for_Deep_Learning/Final_Project/final/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'final/core_base.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.027 ; gain = 32.148
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 103.027 ; gain = 32.148
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 512, unsigned char, 0>::shift_pixels_up' into 'hls::LineBuffer<3, 512, unsigned char, 0>::shift_up' (D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:863).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 512, unsigned char, 0>::shift_up' into 'updateLineBuffer' (final/core_base.cpp:76).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 512, unsigned char, 0>::insert_bottom_row' into 'hls::LineBuffer<3, 512, unsigned char, 0>::insert_top' (D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:883).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 512, unsigned char, 0>::insert_top' into 'updateLineBuffer' (final/core_base.cpp:77).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 512, unsigned char, 0>::getval' into 'updateWindow' (final/core_base.cpp:86).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, short>::insert_pixel' into 'hls::Window<3, 3, short>::insert' (D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:573).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, short>::insert' into 'updateWindow' (final/core_base.cpp:88).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, short>::getval' into 'maxWindow' (final/core_base.cpp:146).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, short>::getval' into 'minWindow' (final/core_base.cpp:134).
+INFO: [XFORM 203-603] Inlining function 'hls::Window<3, 3, short>::getval' into 'sumWindow' (final/core_base.cpp:158).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 147.359 ; gain = 76.480
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'sumWindow' into 'processWindow' (final/core_base.cpp:98) automatically.
+INFO: [XFORM 203-602] Inlining function 'minWindow' into 'processWindow' (final/core_base.cpp:103) automatically.
+INFO: [XFORM 203-602] Inlining function 'maxWindow' into 'processWindow' (final/core_base.cpp:106) automatically.
+INFO: [XFORM 203-602] Inlining function 'updateLineBuffer' into 'processImage' (final/core_base.cpp:38) automatically.
+INFO: [XFORM 203-602] Inlining function 'sendOutputData' into 'processImage' (final/core_base.cpp:62) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 181.074 ; gain = 110.195
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'updateLineBuffer' (final/core_base.cpp:73).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'sumWindow' (final/core_base.cpp:153).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'minWindow' (final/core_base.cpp:129).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'maxWindow' (final/core_base.cpp:141).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'updateWindow' (final/core_base.cpp:80).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:727) in function 'updateLineBuffer' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (final/core_base.cpp:156) in function 'sumWindow' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (final/core_base.cpp:157) in function 'sumWindow' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (final/core_base.cpp:132) in function 'minWindow' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (final/core_base.cpp:133) in function 'minWindow' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (final/core_base.cpp:144) in function 'maxWindow' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (final/core_base.cpp:145) in function 'maxWindow' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (final/core_base.cpp:84) in function 'updateWindow' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (final/core_base.cpp:85) in function 'updateWindow' completely with a factor of 3.
+INFO: [XFORM 203-101] Partitioning array 'lineBuff.val' (final/core_base.cpp:13) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window.val' (final/core_base.cpp:14) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window.val' (final/core_base.cpp:14) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'sumWindow' into 'processWindow' (final/core_base.cpp:98) automatically.
+INFO: [XFORM 203-602] Inlining function 'minWindow' into 'processWindow' (final/core_base.cpp:103) automatically.
+INFO: [XFORM 203-602] Inlining function 'maxWindow' into 'processWindow' (final/core_base.cpp:106) automatically.
+INFO: [XFORM 203-602] Inlining function 'updateLineBuffer' into 'processImage' (final/core_base.cpp:38) automatically.
+INFO: [XFORM 203-602] Inlining function 'updateWindow' into 'processImage' (final/core_base.cpp:41) automatically.
+INFO: [XFORM 203-602] Inlining function 'processWindow' into 'processImage' (final/core_base.cpp:46) automatically.
+INFO: [XFORM 203-602] Inlining function 'sendOutputData' into 'processImage' (final/core_base.cpp:62) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (final/core_base.cpp:30:65) to (final/core_base.cpp:61:9) in function 'processImage'... converting 6 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'processImage' (final/core_base.cpp:7)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 239.367 ; gain = 168.488
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuff.val[2]' (final/core_base.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuff.val[0]' (final/core_base.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuff.val[1]' (final/core_base.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuff.val[2]' (final/core_base.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuff.val[0]' (final/core_base.cpp:13).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuff.val[1]' (final/core_base.cpp:13).
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 250.859 ; gain = 179.980
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'processImage' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'processImage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'processImage': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('lineBuff_val_0_load', final/core_base.cpp:86->final/core_base.cpp:41) on array 'lineBuff.val[0]', final/core_base.cpp:13 and 'store' operation (D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:729->D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:863->final/core_base.cpp:76->final/core_base.cpp:38) of variable 'lineBuff_val_1_load', D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:729->D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:863->final/core_base.cpp:76->final/core_base.cpp:38 on array 'lineBuff.val[0]', final/core_base.cpp:13.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('lineBuff_val_0_load_1', final/core_base.cpp:86->final/core_base.cpp:41) on array 'lineBuff.val[0]', final/core_base.cpp:13 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lineBuff_val_0'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('kernel_load_6', final/core_base.cpp:87->final/core_base.cpp:41) on array 'kernel' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'kernel'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 10.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.691 seconds; current allocated memory: 194.407 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.182 seconds; current allocated memory: 195.379 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'processImage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_strb_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_user_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_id_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_dest_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_data_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_keep_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_strb_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_user_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_last_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_id_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_dest_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/kernel' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/operation' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'processImage' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'processImage_lineBuff_val_0' to 'processImage_linebkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'processImage_lineBuff_val_1' to 'processImage_linecud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'processImage_lineBuff_val_2' to 'processImage_linedEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'processImage'.
+INFO: [HLS 200-111]  Elapsed time: 0.458 seconds; current allocated memory: 197.042 MB.
+INFO: [RTMG 210-278] Implementing memory 'processImage_linebkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 257.738 ; gain = 186.859
+INFO: [SYSC 207-301] Generating SystemC RTL for processImage.
+INFO: [VHDL 208-304] Generating VHDL RTL for processImage.
+INFO: [VLOG 209-307] Generating Verilog RTL for processImage.
+INFO: [HLS 200-112] Total elapsed time: 19.758 seconds; peak allocated memory: 197.042 MB.

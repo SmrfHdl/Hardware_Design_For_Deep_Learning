@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('kernel_load_6', final/core_base.cpp:87->final/core_base.cpp:41) on array 'kernel' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'kernel'." projectName="final" solutionName="solution1" date="2024-12-12T17:25:17.624+0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('lineBuff_val_0_load_1', final/core_base.cpp:86->final/core_base.cpp:41) on array 'lineBuff.val[0]', final/core_base.cpp:13 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lineBuff_val_0'." projectName="final" solutionName="solution1" date="2024-12-12T17:25:17.577+0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'processImage': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between 'load' operation ('lineBuff_val_0_load', final/core_base.cpp:86->final/core_base.cpp:41) on array 'lineBuff.val[0]', final/core_base.cpp:13 and 'store' operation (D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:729->D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:863->final/core_base.cpp:76->final/core_base.cpp:38) of variable 'lineBuff_val_1_load', D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:729->D:/Year3/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:863->final/core_base.cpp:76->final/core_base.cpp:38 on array 'lineBuff.val[0]', final/core_base.cpp:13." projectName="final" solutionName="solution1" date="2024-12-12T17:25:17.561+0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuff.val[1]' (final/core_base.cpp:13)." projectName="final" solutionName="solution1" date="2024-12-12T17:25:17.310+0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuff.val[0]' (final/core_base.cpp:13)." projectName="final" solutionName="solution1" date="2024-12-12T17:25:17.152+0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuff.val[2]' (final/core_base.cpp:13)." projectName="final" solutionName="solution1" date="2024-12-12T17:25:17.137+0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuff.val[1]' (final/core_base.cpp:13)." projectName="final" solutionName="solution1" date="2024-12-12T17:25:17.121+0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuff.val[0]' (final/core_base.cpp:13)." projectName="final" solutionName="solution1" date="2024-12-12T17:25:17.105+0700" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuff.val[2]' (final/core_base.cpp:13)." projectName="final" solutionName="solution1" date="2024-12-12T17:25:17.089+0700" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
