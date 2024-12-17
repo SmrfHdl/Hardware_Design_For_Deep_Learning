@@ -58,7 +58,7 @@ int main() {
     }
 
     printf("Calling Core function\n");
-    processImage(inputStream, outputStream, kernel, 0);
+    processImage(inputStream, outputStream, kernel);
     
     for (int idxRows = 0; idxRows < imageSrc.rows; idxRows++) {
         for (int idxCols = 0; idxCols < imageSrc.cols; idxCols++) {
