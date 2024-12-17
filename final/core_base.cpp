@@ -1,3 +1,4 @@
+#define DEBUG_LINEBUFF
 #include "core.h"
 
 /*
@@ -6,8 +7,7 @@
  */
 void processImage(hls::stream<uint_8_side_channel>& inStream,
                hls::stream<int_8_side_channel> & outStream,
-               char                              kernel[KERNEL_DIM * KERNEL_DIM],
-               int                               operation)
+               char                              kernel[KERNEL_DIM * KERNEL_DIM])
 {
     // Defining the line buffer and window
     hls::LineBuffer<KERNEL_DIM, IMG_WIDTH, unsigned char> lineBuff;
@@ -26,9 +26,11 @@ void processImage(hls::stream<uint_8_side_channel>& inStream,
     int_8_side_channel dataOutSideChannel;
     uint_8_side_channel currPixelSideChannel;
 
+#pragma HLS ARRAY_PARTITION variable=kernel complete dim=1
+
     // Iterate over all pixels
     for (int idxPixel = 0; idxPixel < (IMG_WIDTH * IMG_HEIGHT); idxPixel++) {
-#pragma HLS PIPELINE
+#pragma HLS PIPELINE II=1
 
         // Read and cache pixel data
         currPixelSideChannel = inStream.read();
@@ -40,10 +42,12 @@ void processImage(hls::stream<uint_8_side_channel>& inStream,
         // Update window and perform kernel multiplication
         updateWindow(lineBuff, window, kernel, pixConvolved);
 
-        // Convolve or perform operation if within bounds
+        // Convolve if within bounds
         short valOutput = 0;
         if ((idxRow >= KERNEL_DIM - 1) && (idxCol >= KERNEL_DIM - 1)) {
-            valOutput = processWindow(window, operation);
+            valOutput = sumWindow(&window);
+            valOutput = valOutput / 8;
+            if (valOutput < 0) valOutput = 0;
             pixConvolved++;
         }
 
@@ -73,6 +77,8 @@ void processImage(hls::stream<uint_8_side_channel>& inStream,
 void updateLineBuffer(hls::LineBuffer<KERNEL_DIM, IMG_WIDTH, unsigned char>& lineBuff,
                       unsigned char pixelIn, int idxCol)
 {
+#define DEBUG_LINEBUFFER
+#pragma HLS INLINE
     lineBuff.shift_up(idxCol);
     lineBuff.insert_top(pixelIn, idxCol); // Insert at the top row of the buffer
 }
@@ -81,32 +87,15 @@ void updateWindow(hls::LineBuffer<KERNEL_DIM, IMG_WIDTH, unsigned char>& lineBuf
                   hls::Window<KERNEL_DIM, KERNEL_DIM, short>& window,
                   char kernel[KERNEL_DIM * KERNEL_DIM], int pixConvolved)
 {
+#pragma HLS INLINE
     for (int idxWinRow = 0; idxWinRow < KERNEL_DIM; idxWinRow++) {
         for (int idxWinCol = 0; idxWinCol < KERNEL_DIM; idxWinCol++) {
+#pragma HLS UNROLL
             short val = (short)lineBuff.getval(idxWinRow, idxWinCol + pixConvolved);
             val = (short)kernel[(idxWinRow * KERNEL_DIM) + idxWinCol] * val;
             window.insert(val, idxWinRow, idxWinCol);
         }
     }
-}
-
-short processWindow(hls::Window<KERNEL_DIM, KERNEL_DIM, short>& window, int operation)
-{
-    short valOutput = 0;
-    switch (operation) {
-        case 0: // Convolution
-            valOutput = sumWindow(&window);
-            valOutput = valOutput / 8;
-            if (valOutput < 0) valOutput = 0;
-            break;
-        case 1: // Erode
-            valOutput = minWindow(&window);
-            break;
-        case 2: // Dilate
-            valOutput = maxWindow(&window);
-            break;
-    }
-    return valOutput;
 }
 
 void sendOutputData(hls::stream<int_8_side_channel>& outStream,
@@ -115,6 +104,7 @@ void sendOutputData(hls::stream<int_8_side_channel>& outStream,
                     uint_8_side_channel& currPixelSideChannel,
                     bool isLast)
 {
+#pragma HLS INLINE
     dataOutSideChannel.data = valOutput;
     dataOutSideChannel.keep = currPixelSideChannel.keep;
     dataOutSideChannel.strb = currPixelSideChannel.strb;
@@ -126,35 +116,13 @@ void sendOutputData(hls::stream<int_8_side_channel>& outStream,
     outStream.write(dataOutSideChannel);
 }
 
-short minWindow(hls::Window<KERNEL_DIM, KERNEL_DIM, short>* window)
-{
-    unsigned char minVal = 255;
-    for (int idxRow = 0; idxRow < KERNEL_DIM; idxRow++) {
-        for (int idxCol = 0; idxCol < KERNEL_DIM; idxCol++) {
-            unsigned char valInWindow = (unsigned char)window->getval(idxRow, idxCol);
-            if (valInWindow < minVal) minVal = valInWindow;
-        }
-    }
-    return minVal;
-}
-
-short maxWindow(hls::Window<KERNEL_DIM, KERNEL_DIM, short>* window)
-{
-    unsigned char maxVal = 0;
-    for (int idxRow = 0; idxRow < KERNEL_DIM; idxRow++) {
-        for (int idxCol = 0; idxCol < KERNEL_DIM; idxCol++) {
-            unsigned char valInWindow = (unsigned char)window->getval(idxRow, idxCol);
-            if (valInWindow > maxVal) maxVal = valInWindow;
-        }
-    }
-    return maxVal;
-}
 
 short sumWindow(hls::Window<KERNEL_DIM, KERNEL_DIM, short>* window)
 {
     short accumulator = 0;
     for (int idxRow = 0; idxRow < KERNEL_DIM; idxRow++) {
         for (int idxCol = 0; idxCol < KERNEL_DIM; idxCol++) {
+#pragma HLS UNROLL
             accumulator += (short)window->getval(idxRow, idxCol);
         }
     }
