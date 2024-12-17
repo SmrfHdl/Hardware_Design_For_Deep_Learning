@@ -14,8 +14,7 @@ short convolve2d(hls::Window < KERNEL_DIM, KERNEL_DIM, char > *window,
 // Our IP core
 void processImage(hls::stream < uint_8_side_channel >& inStream,
                hls::stream < int_8_side_channel > & outStream,
-               char kernel[KERNEL_DIM * KERNEL_DIM],
-               int operation);
+               char kernel[KERNEL_DIM * KERNEL_DIM]);
 
 short sumWindow(hls::Window < KERNEL_DIM, KERNEL_DIM, short > *window);
 short minWindow(hls::Window < KERNEL_DIM, KERNEL_DIM, short > *window);
