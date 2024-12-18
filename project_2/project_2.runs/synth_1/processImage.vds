@@ -1,0 +1,666 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Dec 19 00:41:02 2024
+# Process ID: 9480
+# Current directory: D:/Docs/Hardware/project/project_2/project_2.runs/synth_1
+# Command line: vivado.exe -log processImage.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source processImage.tcl
+# Log file: D:/Docs/Hardware/project/project_2/project_2.runs/synth_1/processImage.vds
+# Journal file: D:/Docs/Hardware/project/project_2/project_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source processImage.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Docs/Hardware/project/base1/solution4'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Setting_code/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top processImage -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9484 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 392.359 ; gain = 103.449
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'processImage' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:58]
+	Parameter C_S_AXI_KERNEL_BUS_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_KERNEL_BUS_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:105]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:108]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:310]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:316]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:323]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:326]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:382]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:404]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:437]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:456]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_KERNEL_BUS_s_axi' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_KERNEL_BUS_s_axi.vhd:12' bound to instance 'processImage_KERNEL_BUS_s_axi_U' of component 'processImage_KERNEL_BUS_s_axi' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:559]
+INFO: [Synth 8-638] synthesizing module 'processImage_KERNEL_BUS_s_axi' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_KERNEL_BUS_s_axi.vhd:113]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'processImage_KERNEL_BUS_s_axi' (1#1) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_KERNEL_BUS_s_axi.vhd:113]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_linebkb' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_linebkb.vhd:100' bound to instance 'lineBuff_val_0_U' of component 'processImage_linebkb' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:599]
+INFO: [Synth 8-638] synthesizing module 'processImage_linebkb' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_linebkb.vhd:118]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_linebkb_ram' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_linebkb.vhd:13' bound to instance 'processImage_linebkb_ram_U' of component 'processImage_linebkb_ram' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_linebkb.vhd:135]
+INFO: [Synth 8-638] synthesizing module 'processImage_linebkb_ram' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_linebkb.vhd:34]
+	Parameter MEM_TYPE bound to: block - type: string 
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 512 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'processImage_linebkb_ram' (2#1) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_linebkb.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'processImage_linebkb' (3#1) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_linebkb.vhd:118]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_linebkb' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_linebkb.vhd:100' bound to instance 'lineBuff_val_1_U' of component 'processImage_linebkb' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:616]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 512 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_linebkb' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_linebkb.vhd:100' bound to instance 'lineBuff_val_2_U' of component 'processImage_linebkb' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:633]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_mac_eOg' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_eOg.vhd:44' bound to instance 'processImage_mac_eOg_U1' of component 'processImage_mac_eOg' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:650]
+INFO: [Synth 8-638] synthesizing module 'processImage_mac_eOg' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_eOg.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_mac_eOg_DSP48_0' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_eOg.vhd:12' bound to instance 'processImage_mac_eOg_DSP48_0_U' of component 'processImage_mac_eOg_DSP48_0' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_eOg.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'processImage_mac_eOg_DSP48_0' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_eOg.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'processImage_mac_eOg_DSP48_0' (4#1) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_eOg.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'processImage_mac_eOg' (5#1) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_eOg.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_mac_eOg' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_eOg.vhd:44' bound to instance 'processImage_mac_eOg_U2' of component 'processImage_mac_eOg' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:664]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_mac_fYi' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_fYi.vhd:44' bound to instance 'processImage_mac_fYi_U3' of component 'processImage_mac_fYi' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:678]
+INFO: [Synth 8-638] synthesizing module 'processImage_mac_fYi' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_fYi.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_mac_fYi_DSP48_1' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_fYi.vhd:12' bound to instance 'processImage_mac_fYi_DSP48_1_U' of component 'processImage_mac_fYi_DSP48_1' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_fYi.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'processImage_mac_fYi_DSP48_1' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_fYi.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'processImage_mac_fYi_DSP48_1' (6#1) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_fYi.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'processImage_mac_fYi' (7#1) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_fYi.vhd:59]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_mac_eOg' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_eOg.vhd:44' bound to instance 'processImage_mac_eOg_U4' of component 'processImage_mac_eOg' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:692]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'processImage_mac_eOg' declared at 'D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage_mac_eOg.vhd:44' bound to instance 'processImage_mac_eOg_U5' of component 'processImage_mac_eOg' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:706]
+INFO: [Synth 8-256] done synthesizing module 'processImage' (8#1) [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:58]
+WARNING: [Synth 8-3331] design processImage_linebkb has unconnected port reset
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[31]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[30]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[29]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[28]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[27]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[26]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[25]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[24]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[23]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[22]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[21]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[20]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[19]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[18]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[17]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[16]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[15]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[14]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[13]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[12]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[11]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[10]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[9]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WDATA[8]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WSTRB[3]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WSTRB[2]
+WARNING: [Synth 8-3331] design processImage_KERNEL_BUS_s_axi has unconnected port WSTRB[1]
+WARNING: [Synth 8-3331] design processImage has unconnected port inStream_TLAST[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 452.078 ; gain = 163.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 452.078 ; gain = 163.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 452.078 ; gain = 163.168
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'processImage_KERNEL_BUS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'processImage_KERNEL_BUS_s_axi'
+INFO: [Synth 8-5544] ROM "BVALID" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "WREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AWREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RVALID_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ARREADY_t" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'lineBuff_val_2_addr_reg_719_reg[8:0]' into 'lineBuff_val_1_addr_reg_714_reg[8:0]' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:1600]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_fu_618_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond2_fu_469_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "inStream_V_data_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inStream_V_dest_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inStream_V_id_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inStream_V_keep_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inStream_V_strb_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inStream_V_user_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "outStream_V_data_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "outStream_V_dest_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "outStream_V_id_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "outStream_V_keep_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "outStream_V_last_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "outStream_V_strb_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "outStream_V_user_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                              011
+*
+                  wridle |                             0010 |                              000
+                  wrdata |                             0100 |                              001
+                  wrresp |                             1000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'processImage_KERNEL_BUS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              110
+*
+                  rdidle |                              010 |                              100
+                  rddata |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'processImage_KERNEL_BUS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 478.258 ; gain = 189.348
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               19 Bit    Registers := 2     
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 39    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 7     
+	                5 Bit    Registers := 7     
+	                2 Bit    Registers := 21    
+	                1 Bit    Registers := 59    
++---RAMs : 
+	               4K Bit         RAMs := 3     
++---Muxes : 
+	  14 Input     32 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   3 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 2     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   3 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 17    
+	   4 Input      2 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 39    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module processImage 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               19 Bit    Registers := 2     
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 24    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 7     
+	                5 Bit    Registers := 7     
+	                2 Bit    Registers := 20    
+	                1 Bit    Registers := 51    
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 1     
+	   3 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 2     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   3 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 17    
+	   4 Input      2 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 38    
+Module processImage_KERNEL_BUS_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	  14 Input     32 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module processImage_linebkb_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---RAMs : 
+	               4K Bit         RAMs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+DSP Report: Generating DSP p, operation Mode is: C+A*B.
+DSP Report: operator p is absorbed into DSP p.
+DSP Report: operator m is absorbed into DSP p.
+INFO: [Synth 8-4471] merging register 'reg_465_reg[7:0]' into 'reg_465_reg[7:0]' [D:/Docs/Hardware/project/base1/solution4/syn/vhdl/processImage.vhd:715]
+INFO: [Synth 8-5546] ROM "exitcond2_fu_469_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exitcond_fu_618_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design processImage has port s_axi_KERNEL_BUS_RRESP[1] driven by constant 0
+WARNING: [Synth 8-3917] design processImage has port s_axi_KERNEL_BUS_RRESP[0] driven by constant 0
+WARNING: [Synth 8-3917] design processImage has port s_axi_KERNEL_BUS_BRESP[1] driven by constant 0
+WARNING: [Synth 8-3917] design processImage has port s_axi_KERNEL_BUS_BRESP[0] driven by constant 0
+WARNING: [Synth 8-3331] design processImage has unconnected port inStream_TLAST[0]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[31]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[30]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[29]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[28]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[27]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[26]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[25]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[24]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[23]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[22]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[21]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[20]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[19]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[18]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[17]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[16]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[15]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[14]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[13]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[12]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[11]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[10]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[9]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WDATA[8]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WSTRB[3]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WSTRB[2]
+WARNING: [Synth 8-3331] design processImage has unconnected port s_axi_KERNEL_BUS_WSTRB[1]
+INFO: [Synth 8-3886] merging instance 'tmp_2_reg_709_reg[0]' (FDE) to 'lineBuff_val_1_addr_reg_714_reg[0]'
+INFO: [Synth 8-3886] merging instance 'tmp_2_reg_709_reg[1]' (FDE) to 'lineBuff_val_1_addr_reg_714_reg[1]'
+INFO: [Synth 8-3886] merging instance 'tmp_2_reg_709_reg[2]' (FDE) to 'lineBuff_val_1_addr_reg_714_reg[2]'
+INFO: [Synth 8-3886] merging instance 'tmp_2_reg_709_reg[3]' (FDE) to 'lineBuff_val_1_addr_reg_714_reg[3]'
+INFO: [Synth 8-3886] merging instance 'tmp_2_reg_709_reg[4]' (FDE) to 'lineBuff_val_1_addr_reg_714_reg[4]'
+INFO: [Synth 8-3886] merging instance 'tmp_2_reg_709_reg[5]' (FDE) to 'lineBuff_val_1_addr_reg_714_reg[5]'
+INFO: [Synth 8-3886] merging instance 'tmp_2_reg_709_reg[6]' (FDE) to 'lineBuff_val_1_addr_reg_714_reg[6]'
+INFO: [Synth 8-3886] merging instance 'tmp_2_reg_709_reg[7]' (FDE) to 'lineBuff_val_1_addr_reg_714_reg[7]'
+INFO: [Synth 8-3886] merging instance 'tmp_2_reg_709_reg[8]' (FDE) to 'lineBuff_val_1_addr_reg_714_reg[8]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[8]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[9]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[10]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[11]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[12]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[13]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[14]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[15]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[16]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[16]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[17]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[17]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[18]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[18]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[19]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[19]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[20]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[20]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[21]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[21]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[22]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[22]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[23]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[23]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[24]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[24]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[25]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[25]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[26]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[26]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[27]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[27]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[28]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[28]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[29]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[29]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[30]'
+INFO: [Synth 8-3886] merging instance 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[30]' (FDE) to 'processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\processImage_KERNEL_BUS_s_axi_U/rdata_data_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (processImage_KERNEL_BUS_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module processImage.
+WARNING: [Synth 8-3332] Sequential element (processImage_KERNEL_BUS_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module processImage.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 634.656 ; gain = 345.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|processImage_linebkb_ram: | ram_reg    | 512 x 8(WRITE_FIRST)   | W | R | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|processImage_linebkb_ram: | ram_reg    | 512 x 8(WRITE_FIRST)   | W | R | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|processImage_linebkb_ram: | ram_reg    | 512 x 8(WRITE_FIRST)   | W | R | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|processImage_mac_eOg_DSP48_0 | C+A*B       | 8      | 8      | 8      | -      | 8      | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|processImage_mac_eOg_DSP48_0 | C+A*B       | 8      | 8      | 8      | -      | 8      | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|processImage_mac_fYi_DSP48_1 | C+A*B       | 8      | 8      | 8      | -      | 8      | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|processImage_mac_eOg_DSP48_0 | C+A*B       | 8      | 8      | 8      | -      | 8      | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|processImage_mac_eOg_DSP48_0 | C+A*B       | 8      | 8      | 8      | -      | 8      | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-----------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_2_0/lineBuff_val_0_U/processImage_linebkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_2_1/lineBuff_val_1_U/processImage_linebkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_2_2/lineBuff_val_2_U/processImage_linebkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_2_2/lineBuff_val_2_U/processImage_linebkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 634.656 ; gain = 345.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|processImage_linebkb_ram: | ram_reg    | 512 x 8(WRITE_FIRST)   | W | R | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|processImage_linebkb_ram: | ram_reg    | 512 x 8(WRITE_FIRST)   | W | R | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|processImage_linebkb_ram: | ram_reg    | 512 x 8(WRITE_FIRST)   | W | R | 512 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance lineBuff_val_0_U/processImage_linebkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance lineBuff_val_0_U/processImage_linebkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance lineBuff_val_1_U/processImage_linebkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance lineBuff_val_1_U/processImage_linebkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance lineBuff_val_2_U/processImage_linebkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance lineBuff_val_2_U/processImage_linebkb_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 634.676 ; gain = 345.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 634.676 ; gain = 345.766
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 634.676 ; gain = 345.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 634.676 ; gain = 345.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 634.676 ; gain = 345.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 634.676 ; gain = 345.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 634.676 ; gain = 345.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    35|
+|3     |DSP48E1  |     5|
+|4     |LUT1     |     5|
+|5     |LUT2     |    88|
+|6     |LUT3     |   193|
+|7     |LUT4     |    76|
+|8     |LUT5     |    65|
+|9     |LUT6     |   162|
+|10    |MUXF7    |     5|
+|11    |RAMB18E1 |     3|
+|12    |FDRE     |   440|
+|13    |FDSE     |     2|
+|14    |IBUF     |    55|
+|15    |OBUF     |    68|
++------+---------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+-------------------------------+------+
+|      |Instance                           |Module                         |Cells |
++------+-----------------------------------+-------------------------------+------+
+|1     |top                                |                               |  1203|
+|2     |  lineBuff_val_0_U                 |processImage_linebkb           |    92|
+|3     |    processImage_linebkb_ram_U     |processImage_linebkb_ram_9     |    92|
+|4     |  lineBuff_val_1_U                 |processImage_linebkb_0         |     8|
+|5     |    processImage_linebkb_ram_U     |processImage_linebkb_ram_8     |     8|
+|6     |  lineBuff_val_2_U                 |processImage_linebkb_1         |    59|
+|7     |    processImage_linebkb_ram_U     |processImage_linebkb_ram       |    59|
+|8     |  processImage_KERNEL_BUS_s_axi_U  |processImage_KERNEL_BUS_s_axi  |   263|
+|9     |  processImage_mac_eOg_U1          |processImage_mac_eOg           |     8|
+|10    |    processImage_mac_eOg_DSP48_0_U |processImage_mac_eOg_DSP48_0_7 |     8|
+|11    |  processImage_mac_eOg_U2          |processImage_mac_eOg_2         |    21|
+|12    |    processImage_mac_eOg_DSP48_0_U |processImage_mac_eOg_DSP48_0_6 |    21|
+|13    |  processImage_mac_eOg_U4          |processImage_mac_eOg_3         |     9|
+|14    |    processImage_mac_eOg_DSP48_0_U |processImage_mac_eOg_DSP48_0_5 |     9|
+|15    |  processImage_mac_eOg_U5          |processImage_mac_eOg_4         |    23|
+|16    |    processImage_mac_eOg_DSP48_0_U |processImage_mac_eOg_DSP48_0   |    23|
+|17    |  processImage_mac_fYi_U3          |processImage_mac_fYi           |    11|
+|18    |    processImage_mac_fYi_DSP48_1_U |processImage_mac_fYi_DSP48_1   |    11|
++------+-----------------------------------+-------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 634.676 ; gain = 345.766
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 65 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 634.676 ; gain = 345.766
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 634.676 ; gain = 345.766
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 727.363 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+126 Infos, 65 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 727.363 ; gain = 451.582
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 727.363 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Docs/Hardware/project/project_2/project_2.runs/synth_1/processImage.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file processImage_utilization_synth.rpt -pb processImage_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 19 00:41:16 2024...

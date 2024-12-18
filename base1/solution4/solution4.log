@@ -1,0 +1,149 @@
+==============================================================
+File generated on Thu Dec 19 00:31:54 +0700 2024
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'core_base.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 103.270 ; gain = 18.594
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 103.270 ; gain = 18.594
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 512, unsigned char, 0>::shift_pixels_up' into 'hls::LineBuffer<3, 512, unsigned char, 0>::shift_up' (D:/Setting_code/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:863).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 512, unsigned char, 0>::shift_up' into 'updateLineBuffer' (core_base.cpp:187).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 512, unsigned char, 0>::insert_bottom_row' into 'hls::LineBuffer<3, 512, unsigned char, 0>::insert_top' (D:/Setting_code/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:883).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 512, unsigned char, 0>::insert_top' into 'updateLineBuffer' (core_base.cpp:188).
+INFO: [XFORM 203-603] Inlining function 'updateLineBuffer' into 'processImage' (core_base.cpp:162).
+INFO: [XFORM 203-603] Inlining function 'hls::LineBuffer<3, 512, unsigned char, 0>::getval' into 'convolveAndSum' (core_base.cpp:220).
+INFO: [XFORM 203-603] Inlining function 'sendOutputData' into 'processImage' (core_base.cpp:179).
+INFO: [XFORM 203-603] Inlining function 'sendOutputData' into 'processImage' (core_base.cpp:172).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 148.922 ; gain = 64.246
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 183.703 ; gain = 99.027
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (core_base.cpp:156) in function 'processImage' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'convolveAndSum' (core_base.cpp:213).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (D:/Setting_code/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:727) in function 'processImage' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (core_base.cpp:217) in function 'convolveAndSum' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (core_base.cpp:218) in function 'convolveAndSum' completely with a factor of 3.
+INFO: [XFORM 203-101] Partitioning array 'lineBuff.val' (core_base.cpp:143) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window.val' (core_base.cpp:144) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'kernel' (core_base.cpp:136) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window.val' (core_base.cpp:144) in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'convolveAndSum' into 'processImage' (core_base.cpp:163) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'processImage' (core_base.cpp:134)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 241.410 ; gain = 156.734
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuff.val[2]' (core_base.cpp:143).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuff.val[0]' (core_base.cpp:143).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuff.val[1]' (core_base.cpp:143).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuff.val[2]' (core_base.cpp:143).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuff.val[0]' (core_base.cpp:143).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuff.val[1]' (core_base.cpp:143).
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 254.344 ; gain = 169.668
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'processImage' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'processImage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'processImage': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'load' operation ('lineBuff_val_0_load', core_base.cpp:220->core_base.cpp:163) on array 'lineBuff.val[0]', core_base.cpp:143 and 'store' operation (D:/Setting_code/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:729->D:/Setting_code/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:863->core_base.cpp:187->core_base.cpp:162) of variable 'lineBuff_val_1_load', D:/Setting_code/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:729->D:/Setting_code/Xilinx/Vivado/2018.3/common/technology/autopilot/hls/hls_video_mem.h:863->core_base.cpp:187->core_base.cpp:162 on array 'lineBuff.val[0]', core_base.cpp:143.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('lineBuff_val_1_load_1', core_base.cpp:220->core_base.cpp:163) on array 'lineBuff.val[1]', core_base.cpp:143 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'lineBuff_val_1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (11.315ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'processImage' consists of the following:
+	'mul' operation of DSP[130] ('tmp_13_2_2_i', core_base.cpp:239->core_base.cpp:172) [125]  (3.36 ns)
+	'add' operation of DSP[130] ('tmp7', core_base.cpp:239->core_base.cpp:172) [130]  (3.02 ns)
+	'add' operation of DSP[131] ('tmp6', core_base.cpp:239->core_base.cpp:172) [131]  (3.02 ns)
+	'add' operation ('tmp4', core_base.cpp:239->core_base.cpp:172) [132]  (1.92 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.167 seconds; current allocated memory: 196.083 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 196.622 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'processImage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/inStream_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/outStream_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/kernel_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/kernel_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/kernel_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/kernel_3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/kernel_4' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/kernel_5' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/kernel_6' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/kernel_7' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'processImage/kernel_8' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'processImage' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'kernel_0', 'kernel_1', 'kernel_2', 'kernel_3', 'kernel_4', 'kernel_5', 'kernel_6', 'kernel_7' and 'kernel_8' to AXI-Lite port KERNEL_BUS.
+INFO: [SYN 201-210] Renamed object name 'processImage_lineBuff_val_0' to 'processImage_linebkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'processImage_lineBuff_val_1' to 'processImage_linecud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'processImage_lineBuff_val_2' to 'processImage_linedEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'processImage_mac_muladd_8s_8s_8ns_8_1_1' to 'processImage_mac_eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'processImage_mac_muladd_8s_8s_8s_8_1_1' to 'processImage_mac_fYi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'processImage_mac_eOg': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'processImage_mac_fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'processImage'.
+INFO: [HLS 200-111]  Elapsed time: 0.408 seconds; current allocated memory: 198.448 MB.
+INFO: [RTMG 210-278] Implementing memory 'processImage_linebkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 256.277 ; gain = 171.602
+INFO: [SYSC 207-301] Generating SystemC RTL for processImage.
+INFO: [VHDL 208-304] Generating VHDL RTL for processImage.
+INFO: [VLOG 209-307] Generating Verilog RTL for processImage.
+INFO: [HLS 200-112] Total elapsed time: 16.134 seconds; peak allocated memory: 198.448 MB.
+==============================================================
+File generated on Thu Dec 19 00:33:49 +0700 2024
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+File generated on Thu Dec 19 01:06:09 +0700 2024
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Thu Dec 19 01:14:23 +0700 2024
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

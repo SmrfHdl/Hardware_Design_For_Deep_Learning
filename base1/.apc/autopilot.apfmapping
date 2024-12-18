@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="core_base.cpp" path="D:\Docs\Hardware\project\core_base.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="TestUtils.cpp" path="D:\Docs\Hardware\project\TestUtils.cpp"/>
+    <originFiles name="TestUtils.h" path="D:\Docs\Hardware\project\TestUtils.h"/>
+    <originFiles name="core.h" path="D:\Docs\Hardware\project\core.h"/>
+    <originFiles name="define.h" path="D:\Docs\Hardware\project\define.h"/>
+    <originFiles name="test_core.cpp" path="D:\Docs\Hardware\project\test_core.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,13 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make: 'csim.exe' is up to date.
+Load image D:/Year3/Hardware_design_for_Deep_Learning/Final_Project/final/owl.jpg
+Image Rows:512 Cols:512
+Calling Reference function
+Saving image Ref
+Reference function ended
+Calling Core function
+Saving image
+Core function ended
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

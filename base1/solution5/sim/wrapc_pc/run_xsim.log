@@ -1,0 +1,130 @@
+Load image D:/Docs/Hardware/project/R.png
+Image Rows:512 Cols:512
+Calling Reference function
+Saving image Ref
+Reference function ended
+Calling Core function
+Saving image
+Core function ended
+
+D:\Docs\Hardware\project\base1\solution5\sim\verilog>set PATH= 
+
+D:\Docs\Hardware\project\base1\solution5\sim\verilog>call D:/Setting_code/Xilinx/Vivado/2018.3/bin/xelab xil_defaultlib.apatb_processImage_top glbl -prj processImage.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Setting_code/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s processImage  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Setting_code/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Setting_code/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_processImage_top glbl -prj processImage.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Setting_code/Xilinx/Vivado/2018.3/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s processImage 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_inStream_V_data_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_inStream_V_data_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_inStream_V_dest_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_inStream_V_dest_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_inStream_V_id_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_inStream_V_id_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_inStream_V_keep_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_inStream_V_keep_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_inStream_V_last_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_inStream_V_last_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_inStream_V_strb_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_inStream_V_strb_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_inStream_V_user_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_inStream_V_user_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_outStream_V_data_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_outStream_V_data_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_outStream_V_dest_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_outStream_V_dest_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_outStream_V_id_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_outStream_V_id_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_outStream_V_keep_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_outStream_V_keep_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_outStream_V_last_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_outStream_V_last_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_outStream_V_strb_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_outStream_V_strb_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/AESL_autofifo_outStream_V_user_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_outStream_V_user_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/processImage.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_processImage_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/processImage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processImage
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/processImage_linebkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processImage_linebkb_ram
+INFO: [VRFC 10-311] analyzing module processImage_linebkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/processImage_mac_eOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processImage_mac_eOg_DSP48_0
+INFO: [VRFC 10-311] analyzing module processImage_mac_eOg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Docs/Hardware/project/base1/solution5/sim/verilog/processImage_mac_fYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processImage_mac_fYi_DSP48_1
+INFO: [VRFC 10-311] analyzing module processImage_mac_fYi
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.processImage_linebkb_ram
+Compiling module xil_defaultlib.processImage_linebkb(DataWidth=8...
+Compiling module xil_defaultlib.processImage_mac_eOg_DSP48_0
+Compiling module xil_defaultlib.processImage_mac_eOg(ID=1,NUM_ST...
+Compiling module xil_defaultlib.processImage_mac_fYi_DSP48_1
+Compiling module xil_defaultlib.processImage_mac_fYi(ID=1,NUM_ST...
+Compiling module xil_defaultlib.processImage
+Compiling module xil_defaultlib.AESL_autofifo_inStream_V_data_V
+Compiling module xil_defaultlib.AESL_autofifo_inStream_V_keep_V
+Compiling module xil_defaultlib.AESL_autofifo_inStream_V_strb_V
+Compiling module xil_defaultlib.AESL_autofifo_inStream_V_user_V
+Compiling module xil_defaultlib.AESL_autofifo_inStream_V_last_V
+Compiling module xil_defaultlib.AESL_autofifo_inStream_V_id_V
+Compiling module xil_defaultlib.AESL_autofifo_inStream_V_dest_V
+Compiling module xil_defaultlib.AESL_autofifo_outStream_V_data_V
+Compiling module xil_defaultlib.AESL_autofifo_outStream_V_keep_V
+Compiling module xil_defaultlib.AESL_autofifo_outStream_V_strb_V
+Compiling module xil_defaultlib.AESL_autofifo_outStream_V_user_V
+Compiling module xil_defaultlib.AESL_autofifo_outStream_V_last_V
+Compiling module xil_defaultlib.AESL_autofifo_outStream_V_id_V
+Compiling module xil_defaultlib.AESL_autofifo_outStream_V_dest_V
+Compiling module xil_defaultlib.apatb_processImage_top
+Compiling module work.glbl
+Built simulation snapshot processImage
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Docs/Hardware/project/base1/solution5/sim/verilog/xsim.dir/processImage/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Dec 19 03:50:58 2024...
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/processImage/xsim_script.tcl
+# xsim {processImage} -autoloadwcfg -tclbatch {processImage.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source processImage.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "7869675000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 7869715 ns : File "D:/Docs/Hardware/project/base1/solution5/sim/verilog/processImage.autotb.v" Line 1480
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:21 . Memory (MB): peak = 219.707 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Dec 19 03:51:26 2024...
+Load image D:/Docs/Hardware/project/R.png
+Image Rows:512 Cols:512
+Calling Reference function
+Saving image Ref
+Reference function ended
+Calling Core function
+Saving image
+Core function ended

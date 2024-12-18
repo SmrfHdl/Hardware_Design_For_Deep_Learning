@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Dec 19 03:50:54 2024
+# Process ID: 22936
+# Current directory: D:/Docs/Hardware/project/base1/solution5/sim/verilog
+# Command line: wbtcv.exe -mode batch -source D:/Docs/Hardware/project/base1/solution5/sim/verilog/xsim.dir/processImage/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Docs/Hardware/project/base1/solution5/sim/verilog/webtalk.log
+# Journal file: D:/Docs/Hardware/project/base1/solution5/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source D:/Docs/Hardware/project/base1/solution5/sim/verilog/xsim.dir/processImage/webtalk/xsim_webtalk.tcl -notrace
