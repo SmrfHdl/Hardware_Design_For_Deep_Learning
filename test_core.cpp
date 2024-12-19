@@ -58,7 +58,8 @@ int main() {
     }
 
     printf("Calling Core function\n");
-    processImage(inputStream, outputStream, kernel);
+//    processImage(inputStream, outputStream, kernel);
+    convolution2D(inputStream, outputStream, kernel);
 
     for (int idxRows = 0; idxRows < imageSrc.rows; idxRows++) {
         for (int idxCols = 0; idxCols < imageSrc.cols; idxCols++) {
